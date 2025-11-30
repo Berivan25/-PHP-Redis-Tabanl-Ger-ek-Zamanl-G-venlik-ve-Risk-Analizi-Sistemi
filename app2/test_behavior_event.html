@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Davranış Testi</title>
+</head>
+<body>
+    <h1>Davranış Gönderme Testi</h1>
+    <button onclick="sendTestEvent()">Test Event Gönder</button>
+
+    <script>
+        function sendTestEvent() {
+            fetch('http://localhost/app1/user_behavior.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    event_type: 'page_click',
+                    event_data: 'Kullanıcı test butonuna bastı'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("Durum: " + data.status);
+                console.log(data);
+            })
+            .catch(error => {
+                alert("Hata: " + error);
+            });
+        }
+    </script>
+</body>
+</html>
