@@ -1,2 +1,11 @@
 # -PHP-Redis-Tabanl-Ger-ek-Zamanl-G-venlik-ve-Risk-Analizi-Sistemi
-Web uygulamalarında kullanıcı davranışlarını izleyen, IP ve oturum bazlı risk skoru hesaplayan, başarısız girişlerde CAPTCHA doğrulaması ve yüksek riskli girişlerde IP engelleme yapan güvenlik sistemi. 
+Bu güvenlik sistemi, web uygulamalarındaki kullanıcı aktivitelerini analiz ederek IP ve session bazlı gerçek zamanlı risk skoru oluşturur. 
+
+### Özellikler:
+- Anormal giriş denemelerini tespit etme
+- Belirli eşik değerinin üzerindeki başarısız girişlerde CAPTCHA doğrulama
+- Yüksek risk skoruna sahip IP adreslerinin otomatik engellenmesi
+- Oturum tabanlı davranış izleme
+- Brute-force ve bot saldırılarına karşı koruma
+
+Sistem; güvenlik seviyesini artırmak, yetkisiz erişimleri engellemek ve uygulamayı kötü niyetli otomasyon denemelerinden korumak amacıyla geliştirilmiştir.
